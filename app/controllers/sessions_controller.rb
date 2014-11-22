@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     else
       session[:remember_token] = @user.id
       @current_user = @user
-      redirect_to new_session_path
+      redirect_to "/books/#/profile"
     end
   end
 

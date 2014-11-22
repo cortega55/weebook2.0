@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def show
-     @user = User.find(params[:id])
+     @user = User.find(current_user)
     respond_with @user
   end
 
