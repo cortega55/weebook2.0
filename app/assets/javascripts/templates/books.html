@@ -1,0 +1,94 @@
+<div class="container templates" >
+    <h1 class="page_titles">JOBS</h1>
+    <div class="form-group">
+      <input ng-model="searchJob" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
+    </div><br>
+    <div class="scroll"> 
+      <div id="resultsfield" ng-repeat="job in jobs | filter:searchJob ">
+        <div id="workcontainer">
+          <div id="type">
+            <div class="jobslabel"><p class="size"><strong>Type of Work</strong></p></div>
+            <div class="content"><p>{{job.type_of_work}}</p></div>
+          </div>
+          <div id="tools">
+            <div class="jobslabel"><p class="size"><strong>Tools Needed</strong></p></div>
+            <div class="content"><p>{{job.tools}}</p></div>
+          </div>
+          <div id="time">
+            <div class="jobslabel"><p class="size"><strong>Time Preference</strong></p></div>
+            <div class="content"><p>{{job.time_preference}}</p></div>
+          </div>
+          <div id="duration">
+            <div class="jobslabel"><p class="size"><strong>Job Duration</strong></p></div>
+            <div class="content"><p>{{job.duration}}</p></div>
+          </div>
+          <div id="recurring">
+            <div class="jobslabel"><p class="size"><strong>Recurring</strong></p></div>
+            <div class="content"><p>{{job.recurring}}</p></div>
+          </div>
+          <div id="location">
+            <div class="jobslabel"><p class="size"><strong>Location</strong></p></div>
+            <div class="content"><p>{{job.location}}</p></div>
+          </div>
+          <div id="username">
+            <div class="jobslabel"><p class="size">Created By:</p></div>
+            <div class="content"><p>{{job.user.name}}</p></div>
+          </div>
+          <div id="createdat">
+            <div class="jobslabel"><p class="size">Created At:</p></div>
+            <div class="content"><p>{{job.created_at}}</p></div>
+          </div>
+          <div id="contact">
+            <p class="jobslabel"><a class="size" href="mailto:{{job.contact_email}}?subject=Help From TrueGood">
+              CONTACT
+            </a></p>
+          </div>
+          <div ng-show="you.id == job.user.id">
+            <span ng-hide="job.editing">
+              <a ng-click="editJob(job);" class="btn btn-info"> EDIT </a>
+            </span>
+
+            <span ng-show="job.editing">
+              <a ng-click="backJob(job);" class="btn btn-info"> BACK </a>
+            </span>
+            <span>
+              <a ng-click="deleteJob(job);" class="btn btn-info"> DELETE </a>
+            </span>
+          </div>
+        </div>
+        <div ng-show="job.editing" id="edit">
+          <form class="form-group">
+            <div>
+              <input ng-model="job.type_of_work" type="text" name="type_of_work" class="form-control" placeholder="Type of Work">
+            </div>
+            <div>
+              <input ng-model="job.tools" type="text" name="tools" class="form-control" placeholder="Tools">
+            </div>
+            <div>
+              <input ng-model="job.time_preference" type="time" name="time_preference" class="form-control" placeholder="Time Preference">
+            </div>
+            <div>
+              <input ng-model="job.duration" type="text" name="duration" class="form-control" placeholder="Duration">
+            </div>
+            <div>
+
+              <input ng-model="job.recurring" type="checkbox" name="recurring" class="form-control" placeholder="Recurring"> :Recurring
+            </div>
+            <div>
+              <input ng-model="job.location" type="text" name="location" class="form-control" placeholder="Location">
+            </div>
+            <div>
+              <input ng-model="job.contact_phone" type="tel" name="contact_phone" class="form-control" placeholder="Phone Number">
+            </div>
+            <div>
+              <input ng-model="job.contact_email" type="text" name="contact_email" class="form-control" placeholder="Email">
+            </div>
+            <div>
+            <button type="submit" ng-click="updateJob(job)" class="btn btn-primary small">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+

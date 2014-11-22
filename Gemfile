@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'angular-rails-templates'
 gem 'angularjs-rails'
+gem 'rails_12factor'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
