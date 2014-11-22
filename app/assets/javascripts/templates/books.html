@@ -59,32 +59,19 @@
         <div ng-show="job.editing" id="edit">
           <form class="form-group">
             <div>
-              <input ng-model="job.type_of_work" type="text" name="type_of_work" class="form-control" placeholder="Type of Work">
+              <input ng-model="book.title" type="text" name="type_of_work" class="form-control" placeholder="Type of Work">
             </div>
             <div>
-              <input ng-model="job.tools" type="text" name="tools" class="form-control" placeholder="Tools">
+              <input ng-model="book.author" type="text" name="tools" class="form-control" placeholder="Tools">
             </div>
             <div>
-              <input ng-model="job.time_preference" type="time" name="time_preference" class="form-control" placeholder="Time Preference">
+              <input ng-model="book.ISBN" type="time" name="time_preference" class="form-control" placeholder="Time Preference">
             </div>
             <div>
-              <input ng-model="job.duration" type="text" name="duration" class="form-control" placeholder="Duration">
+              <input ng-model="book.course_code" type="text" name="duration" class="form-control" placeholder="Duration">
             </div>
             <div>
-
-              <input ng-model="job.recurring" type="checkbox" name="recurring" class="form-control" placeholder="Recurring"> :Recurring
-            </div>
-            <div>
-              <input ng-model="job.location" type="text" name="location" class="form-control" placeholder="Location">
-            </div>
-            <div>
-              <input ng-model="job.contact_phone" type="tel" name="contact_phone" class="form-control" placeholder="Phone Number">
-            </div>
-            <div>
-              <input ng-model="job.contact_email" type="text" name="contact_email" class="form-control" placeholder="Email">
-            </div>
-            <div>
-            <button type="submit" ng-click="updateJob(job)" class="btn btn-primary small">Update</button>
+            <button type="submit" ng-click="updateBook(book)" class="btn btn-primary small">Update</button>
             </div>
           </form>
         </div>

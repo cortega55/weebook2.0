@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
     else
       session[:remember_token] = @user.id
       @current_user = @user
-      redirect_to jobs_path
+      redirect_to new_session_path
     end
   end
 
   def destroy
     session.delete(:remember_token)
-    redirect_to jobs_path
+    redirect_to new_session_path
   end
 end
