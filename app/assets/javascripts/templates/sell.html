@@ -1,33 +1,68 @@
-<div class="container templates">
-  <div id="statspage">
-  <div class="row">
-   <h1 class="page_titles">GOOD IN NUMBERS</h1>
-    <section id="stats">
-        <section>
-          <h2 class="good">The United States</h2>
-            <p>Per the 2010 Census, there were 40.3 million people over the age of 65 in the US, or 13% of the total population.  By 2050, people 65 and older are expected to comprise 20% of the total U.S. population.</p>
-            <p>In addition, about 56.7 million people, or 19% of the population, had a disability in 2010, with more than half of them reporting their disability as severe.</p>
-            <p>The population group of 85+ is expected to increase from 5.7 million in 2011 to 14.1 million by 2040.</p>
-            <p>About 28%, or 11.8 million, of noninstitutionalized older persons live alone.  Of which, 8.4 million are women and 3.5 million are men.</p>
-            <p>Almost half of women (46%) age 75+ live alone.</p>
-        </section>
-      <br>
-      <center><hr width="80%"></center>
-      <br>
-        <section>
-          <h2 class= "good">California</h2>
-            <p>The elderly age group will have an overall increase of 112 percent during the period from 1990 to 2020. More than half the counties in California will have over a 100 percent increase in this age group. Eleven of these counties will have growth rates of over 150 percent. These counties are located throughout the central and southern areas of the State.</p>
-      </section>
-      <br>
-      <center><hr width="80%"></center>
-      <br>
-        <section>
-          <h2 class= "good">Los Angeles County</h2>
-            <p>Roughly 11.5% of Los Angeles County's population of 9.9 million are 65 years and older.  The County expects to see a 50%-99% increase in its elderly population by 2020.</p>
-            <p>79% of adults with some form of disability in LA County have a physical disability, 45% have a sensory disability, 17% have a mental health, and 16% have a learning disability.</p>
-        </section>
-    </section>
-  </div>
-</div>
+<div class="container templates" >
+    <h1 class="page_titles">SELL SELL SELL</h1>
+   <!--  <div class="form-group">
+      <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
+    </div><br> -->
+    <div class="scroll"> 
+      <form name="form" ng-submit="saveJob();" class="form-group" >
+        <label for="title"><strong>Title:</strong></label>
+          <input ng-model="book.title" type="text" name="title" class="form-control" placeholder="Title">
+        <label for="author"><strong>Author:</strong></label>
+          <input ng-model="book.author" type="text" name="author" class="form-control" placeholder="Author">
+        <label for="ISBN"><strong>ISBN:</strong></label>
+          <input ng-model="book.ISBN" type="text" name="ISBN" class="form-control" placeholder="ISBN">
+        <label for="course_code"><strong>Course Code:</strong></label>
+          <input ng-model="book.coursecode" type="text" name="course_code" class="form-control" placeholder="Course Code">
+        <br>
+        <button class="button" ng-click="savebook()">Sell My Book!</button>
+        
+      </form>
+          <div class="form-group">
+      <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
+    </div><br>
+
+      <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
+        <div id="workcontainer">
+          <div id="type">
+            <div class="bookslabel"><p class="size"><strong>Type of Work</strong></p></div>
+            <div class="content"><p>{{book.title}}</p></div>
+          </div>
+          <div id="tools">
+            <div class="bookslabel"><p class="size"><strong>Tools Needed</strong></p></div>
+            <div class="content"><p>{{book.author}}</p></div>
+          </div>
+          <div id="time">
+            <div class="bookslabel"><p class="size"><strong>Time Preference</strong></p></div>
+            <div class="content"><p>{{book.ISBN}}</p></div>
+          </div>
+          <div id="duration">
+            <div class="bookslabel"><p class="size"><strong>Job Duration</strong></p></div>
+            <div class="content"><p>{{book.course_code}}</p></div>
+          </div>
+          <div id="username">
+            <div class="bookslabel"><p class="size">Created By:</p></div>
+            <div class="content"><p>{{book.user.name}}</p></div>
+          </div>
+          <div id="createdat">
+            <div class="bookslabel"><p class="size">Created At:</p></div>
+            <div class="content"><p>{{book.created_at}}</p></div>
+          </div>
+          <div id="contact">
+            <p class="bookslabel"><a class="size" href="mailto:{{job.contact_email}}?subject=Help From TrueGood">
+              CONTACT
+            </a></p>
+          </div>
+          <div id="delete">
+            <span>
+              <a ng-click="deleteJob(job);" class="btn btn-info"> DELETE </a>
+            </span>
+          </div>
+        </div>
+        
+      </div>
+   
+    </div>
 </div>
 
+<a ui-sref="checkout">Shopping Cart</a><br>
+<a ui-sref="home">Home</a>
