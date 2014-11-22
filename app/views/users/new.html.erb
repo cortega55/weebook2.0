@@ -1,2 +1,9 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Hello</h1>
+
+<%= form_for User.new do |f| %>
+  <strong>Name:</strong> <%= f.text_field :name, placeholder: 'Johnny Appleseed' %> <br>
+  <strong>Email:</strong> <%= f.email_field :email, placeholder: 'Johnny@Weebooks.com' %> <br>
+  <strong>Password:</strong> <%= f.password_field :password, placeholder: 'Password' %><br>
+  <strong>Confirm Password:</strong> <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %><br>
+  <%= f.submit "Update", class: "btn btn-primary"%>
+<% end %>

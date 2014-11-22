@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       session[:remember_token] = @user.id
       @current_user = @user
       respond_to do |format|
-        format.html {redirect_to :root}
+        format.html {redirect_to books_path}
         format.json {render json: @user, status: :created}
       end
     else
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user = user.find(params[:id])
     @user.destroy
     respond_to do |format|
-      format.html {redirect_to :root}
+      format.html {redirect_to books_path}
       format.json {render json: {head: :ok}}
     end
   end
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       respond_to do |format|
-        format.html {redirect_to jobs_path}
+        format.html {redirect_to books_path}
         format.json {render nothing: true, status: :no_content}
       end
     else
@@ -65,13 +65,15 @@ class UsersController < ApplicationController
     end
   end
 
-end
-
 protected
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name,:username,:email, :password, :password_confirmation)
   end
+
+end
+
+
 
 
 

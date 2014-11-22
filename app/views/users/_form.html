@@ -1,0 +1,6 @@
+<%= form_for User.new do |f| %>
+  <strong>Name:</strong> <%= f.text_field :name, placeholder: 'Johnny Appleseed' %>
+  <strong>Email:</strong> <%= f.email_field :email, placeholder: 'Johnny@Weebooks.com' %>
+  <strong>Password:</strong> <%= f.password_field :password, placeholder: 'Password' %>
+  <%= f.submit "Update", class: "btn btn-primary"%>
+<% end %>
