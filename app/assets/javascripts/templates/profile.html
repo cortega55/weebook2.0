@@ -1,6 +1,5 @@
-<div class="container templates profileContainer" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>
-    
- 
+<div class="container templates profileContainer" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %> 
+
   <div class="row userHeader">
     <div class="col-md-12">
       <h1 class="userHeaderFont">Hi, {{ users.name }}</h1>
@@ -19,19 +18,21 @@
 
   
   
-  <div ng-repeat="book in users.books">
-    <div class="row userbookcontainer">
-      <div class="col-md-12 userBookList">
-        <div class="userbookcontent">
-          <ul><strong>Title: </strong>{{ book.title }}</ul>
-          <ul><strong>Author: </strong>{{ book.author }}</ul>
-          <ul><strong>ISBN: </strong>{{ book.ISBN }}</ul>
-          <ul><strong>Course Code: </strong>{{ book.course_code }}</ul>
+    <div class="profilebackground">
+      <div class="row userbookcontainer" ng-repeat="book in users.books">
+        <div class="col-md-12 userBookList">
+          <div class="userbookcontent">
+            <ul><strong>Title: </strong>{{ book.title }}</ul>
+            <ul><strong>Author: </strong>{{ book.author }}</ul>
+            <ul><strong>ISBN: </strong>{{ book.ISBN }}</ul>
+            <ul><strong>Course Code: </strong>{{ book.course_code }}</ul>
+          </div>
+          <div class="bookcoverplaceholder"></div> 
         </div>
-        <div class="bookcoverplaceholder"></div> 
       </div>
     </div>
-  </div>
+  
+  
         
   
 

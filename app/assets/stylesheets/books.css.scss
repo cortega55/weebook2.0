@@ -178,7 +178,8 @@ color: beige;
 }
 
 .profileContainer {
-  max-width: 320px;
+  /*max-width: 320px;*/
+  margin-left: 25px;
 }
 .userBookList {
   margin: 0 auto;
@@ -188,6 +189,7 @@ color: beige;
   height: auto;
   border: 1px solid grey;
   border-radius: 10px;
+  background-color: rgba(255,255,255,0.7);
 }
 
 .bookhtmllist {
@@ -215,6 +217,8 @@ h1.userHeaderFont {
 
 .row.userbookcontainer {
   margin-left: 0px;
+
+
 }
 
 .row.bookhtmlcontainer {
@@ -222,8 +226,12 @@ h1.userHeaderFont {
 }
 .userbookcontent {
   margin-bottom: 30px;
+  text-shadow: none;
 }
-
+.userbookcontent ul strong{
+  text-shadow: none;
+  color: black;
+}
 .bookcoverplaceholder {
   height: 100px;
   width: 100px;
@@ -237,6 +245,10 @@ span.emailfont {
 
 h5.selleremail {
   text-align: center;
+}
+.selleremail strong{
+  color:black;
+  text-shadow: none;
 }
 
 .spacer {
@@ -257,6 +269,16 @@ width: 120px;
   padding-left: 0px;
   margin: 5px;
   display: block;
+}
+
+.profilebackground {
+  background-image: url("/assets/desktoplight.jpeg");
+  height: 450px;
+  width: 320px;
+  background-size: cover;
+  position: fixed;
+  overflow-x: hidden;
+overflow-y: scroll;
 }
 
 
