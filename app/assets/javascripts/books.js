@@ -59,6 +59,8 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
 
     $scope.newBook = new Book();
 
+    $scope.shoppingCartItem = [];
+
     Book.query(function(books) {
       $scope.books = books;
     });
@@ -66,6 +68,11 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
     User.get(function(users) {
       $scope.users = users;
     });
+
+
+    $scope.addItemToCart = function(item) {
+      $scope.shoppingCartItem.push()
+    }
 
     $scope.saveBook = function () {
       $scope.newBook.$save(function(book) {
