@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
     .container.ng-scope     {
         padding: 0px;
-        overflow-y: hidden;
+        overflow-x: hidden;
       }
       .boxes {
         margin: 5px 0;
@@ -76,7 +76,7 @@ color: beige;
   background-image: url("/assets/leavesbike2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 570px;
   width: 342px;
 }
 .page_titles {
