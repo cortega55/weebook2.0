@@ -1,6 +1,19 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#bookshtml {
+padding-top: 0px;
+margin-left: 0px;
+}
+div.bookshtml#workcontainer {
+color: black;
+text-align: center;
+}
+h1#booksTitle {
+color: black;
+text-shadow: none;
+}
     .container.ng-scope     {
         padding: 0px;
         overflow-y: hidden;
@@ -68,7 +81,9 @@ color: beige;
 }
 
 
+
 /* START PROFILE PAGE STYLING */
+
 
 .sellpage {
   background-image: url("/assets/leavesbike2.jpg");
@@ -114,6 +129,7 @@ color: beige;
   height: 250px;
   border: 1px solid grey;
 }
+
 
 .userHeader {
   height: 200px;
