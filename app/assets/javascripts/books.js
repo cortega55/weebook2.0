@@ -106,46 +106,4 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
       //   $scope.errors = errors.data
       });
     };
-
-    // $scope.clearErrors = function() {
-    //   $scope.errors = null;
-    // }
 }]);
-
-// var ModalCtrl = function ($scope, $modal, $log, $state) {
-
-//   $scope.jobs = [];
-
-//   $scope.open = function () {
-
-//     var modalInstance = $modal.open({
-//       templateUrl: 'myModalContent.html',
-//       controller: ModalInstanceCtrl
-//     });
-
-//     modalInstance.result.then(function (newJob) {
-//       newJob.$save(function(job) {
-//         $state.reload();
-//       });
-//     }, function () {
-//       $log.info('Modal dismissed at: ' + new Date());
-//     });
-//   };
-// };
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
-// var ModalInstanceCtrl = function ($scope, $modalInstance, Job) {
-
-//    $scope.newJob = new Job();
-
-//   $scope.ok = function () {
-//     $modalInstance.close($scope.newJob);
-
-//   };
-
-//   $scope.cancel = function () {
-//     $modalInstance.dismiss('cancel');
-//   };
-// };
