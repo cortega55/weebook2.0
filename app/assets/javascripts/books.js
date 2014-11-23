@@ -40,7 +40,7 @@ weebookApp.config(function($stateProvider, $urlRouterProvider) {
    });
 
 weebookApp.factory('Book', ['$resource', function($resource) {
-  return $resource('/jobs/:id',
+  return $resource('/books/:id',
      {id: '@id'},
      {update: { method: 'PATCH'}});
 }]);
@@ -68,7 +68,7 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
 
     $scope.saveBook = function () {
       $scope.newBook.$save(function(book) {
-        $scope.books.unshift(book)
+        $scope.books.unshift(book);
         $scope.newBook = new Book();
       });
     }

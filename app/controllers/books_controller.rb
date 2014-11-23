@@ -16,7 +16,7 @@ class BooksController < ApplicationController
     @book.user_id = current_user.id
     if @book.save
       respond_to do |format|
-        format.html { redirect_to jobs_path }
+        format.html { redirect_to books_path }
         format.json { render json: @book, status: :created }
       end
     else
@@ -28,8 +28,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    # @book = Job.find(params[:id])
-    # respond_with @book
+   
   end
 
   def edit
@@ -40,7 +39,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update_attributes(set_params)
       respond_to do |format|
-        format.html { redirect_to jobs_path }
+        format.html { redirect_to books_path }
         format.json { render nothing: true, status: :no_content }
       end
     else
@@ -64,7 +63,7 @@ class BooksController < ApplicationController
   protected
 
   def set_params
-    params.require(:job).permit(:title, :author, :ISBN, :course_code)
+    params.require(:book).permit(:title, :author, :ISBN, :course_code)
   end
 
 end
