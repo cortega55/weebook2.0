@@ -1,20 +1,24 @@
+<div class="wrapper" ng-controller="BookCtrl">
 <h1>Hello</h1>
-
+<div id="signin">
 <h1>Welcome back! Sign in here:</h1>
-
-<%= form_for User.new do |f| %>
-  <strong>Name:</strong> <%= f.text_field :name, placeholder: 'Johnny Appleseed' %> <br>
-  <strong>Email:</strong> <%= f.email_field :email, placeholder: 'Johnny@Weebooks.com' %> <br>
-  <strong>Password:</strong> <%= f.password_field :password, placeholder: 'Password' %><br>
-  <strong>Confirm Password:</strong> <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %><br>
-  <%= f.submit "Update", class: "btn btn-primary"%>
-<% end %>
-<br><br>
-
-
-<h1>New to Weebooks? No Problem! Make an account here:</h1>
 <%= form_for :session, :url => sessions_path do |f| %>
-  Email: <%= f.email_field :email %>
-  Password: <%= f.password_field :password %>
-  <%= f.submit "login", class:"btn btn-primary"%>
+  <strong>Email:</strong> <br/><%= f.email_field :email %><br/>
+  <strong>Password:</strong> <br/><%= f.password_field :password %><br/>
+  <%= f.submit "login", class:"buttons btn btn-primary"%>
 <% end %>
+</div>
+
+<div id="signup" >
+	<h1>New to Weebooks? No Problem! Make an account here:</h1>
+<%= form_for User.new do |f| %>
+  <strong>Name:</strong><br/> <%= f.text_field :name, placeholder: 'Johnny Appleseed' %> <br>
+  <strong>Email:</strong><br/> <%= f.email_field :email, placeholder: 'Johnny@Weebooks.com' %> <br>
+  <strong>Password:</strong><br/> <%= f.password_field :password, placeholder: 'Password' %><br>
+  <strong>Confirm Password:</strong><br/> <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %><br>
+  <%= f.submit "Update", class: "buttons btn btn-primary"%>
+<% end %>
+<br>
+</div>
+
+</div>
