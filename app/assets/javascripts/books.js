@@ -71,7 +71,8 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
     });
 
     $scope.addItemToCart = function (book) {
-      $scope.shoppingcart.unshift(book); 
+      $scope.shoppingcart.push(book); 
+      
       console.log($scope.shoppingcart)
           
     }
