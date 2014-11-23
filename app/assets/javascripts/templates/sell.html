@@ -1,20 +1,20 @@
-<div class="container templates" >
+<div class="container templates" ng-controller="BookCtrl">
     <h1 class="page_titles">SELL SELL SELL</h1>
    <!--  <div class="form-group">
       <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
     </div><br> -->
     <div class="scroll"> 
-      <form name="form" ng-submit="saveJob();" class="form-group" >
+      <form name="form" class="form-group" >
         <label for="title"><strong>Title:</strong></label>
-          <input ng-model="book.title" type="text" name="title" class="form-control" placeholder="Title">
+          <input ng-model="newBook.title" type="text" name="title" class="form-control" placeholder="Title">
         <label for="author"><strong>Author:</strong></label>
-          <input ng-model="book.author" type="text" name="author" class="form-control" placeholder="Author">
+          <input ng-model="newBook.author" type="text" name="author" class="form-control" placeholder="Author">
         <label for="ISBN"><strong>ISBN:</strong></label>
-          <input ng-model="book.ISBN" type="text" name="ISBN" class="form-control" placeholder="ISBN">
+          <input ng-model="newBook.ISBN" type="text" name="ISBN" class="form-control" placeholder="ISBN">
         <label for="course_code"><strong>Course Code:</strong></label>
-          <input ng-model="book.coursecode" type="text" name="course_code" class="form-control" placeholder="Course Code">
+          <input ng-model="newBook.course_code" type="text" name="course_code" class="form-control" placeholder="Course Code">
         <br>
-        <button class="button" ng-click="savebook()">Sell My Book!</button>
+        <button class="button" ng-click="saveBook()">Sell My Book!</button>
         
       </form>
           <div class="form-group">
@@ -39,10 +39,6 @@
             <div class="bookslabel"><p class="size"><strong>Job Duration</strong></p></div>
             <div class="content"><p>{{book.course_code}}</p></div>
           </div>
-          <div id="username">
-            <div class="bookslabel"><p class="size">Created By:</p></div>
-            <div class="content"><p>{{book.user.name}}</p></div>
-          </div>
           <div id="createdat">
             <div class="bookslabel"><p class="size">Created At:</p></div>
             <div class="content"><p>{{book.created_at}}</p></div>
@@ -54,7 +50,7 @@
           </div>
           <div id="delete">
             <span>
-              <a ng-click="deleteJob(job);" class="btn btn-info"> DELETE </a>
+              <a ng-click="deleteBook(book);" class="btn btn-info"> DELETE </a>
             </span>
           </div>
         </div>
