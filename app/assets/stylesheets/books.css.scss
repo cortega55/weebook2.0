@@ -2,29 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
     .container.ng-scope     {
-        max-width: 320px !important;
-        height: auto;
+        padding: 0px;
       }
       .boxes {
         margin: 5px 0;
+        height: 220px;
+        width: 320px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 111px;
+        color: white;
+        opacity: 0.8;
       }
       .topbox {
-        height: 220px;
-        width: 320px;
+        
         background-image: url("/assets/bookcase.jpg");
-        background-size: cover;
-        padding: 111px;
-        color: white;
-        opacity: 0.8;
+        
       }
       .topbox2 {
-        height: 220px;
-        width: 320px;
+        
         background-image: url("/assets/bike.jpg");
-        background-size: cover;
-        padding: 111px;
-        color: white;
-        opacity: 0.8;
+        
       }
 
       img {
