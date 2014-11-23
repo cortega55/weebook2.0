@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
     .container.ng-scope     {
         padding: 0px;
+        overflow-y: hidden;
       }
       .boxes {
         margin: 5px 0;
@@ -34,6 +35,7 @@
       text-align: center;
       margin-top: -20px;
     }
+
     div#defaultContainer {
 width: 320px;
 }
@@ -64,3 +66,28 @@ button a:hover {
 text-decoration: none;
 color: beige;
 }
+
+
+    .sellpage {
+      background-image: url("/assets/leavesbike2.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+height: 600px;
+width: 342px;
+    }
+    .page_titles {
+      color: white;
+      text-shadow: 2px 2px rgba(0,0,0,.7);
+      margin-left: 99px;
+    }
+    .scroll {
+      color: white;
+      width: 167px;
+      margin-left: 64px;
+      opacity: 0.7;
+    }
+    .sellbutton {
+      margin-left: 30px;
+    }
+    
+
