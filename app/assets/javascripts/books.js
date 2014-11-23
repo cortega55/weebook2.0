@@ -59,8 +59,6 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
 
     $scope.newBook = new Book();
 
-    // $scope.userBooks=[];
-
     Book.query(function(books) {
       $scope.books = books;
     });
@@ -68,12 +66,6 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
     User.get(function(users) {
       $scope.users = users;
     });
-
-    $scope.userBooks = function() {
-      for (var i; i < users["books"].length; i++) {
-        console.log(users.books[i].title)
-      }
-    }
 
     $scope.saveBook = function () {
       $scope.newBook.$save(function(book) {

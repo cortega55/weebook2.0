@@ -1,14 +1,17 @@
-<div class="container templates" ng-controller="BookCtrl">
-  You are {{ users.name }}<br>
+<div class="container templates" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>
+  Hi, {{ users.name }}<br>
   {{ users.email }}
-  <ul ng-repeat="user in users">
-        {{ users.book }}
-  </ul>
+  
+  <div ng-repeat="book in users.books">
+    {{ book.title }}
+  </div>
+        
+  
 
 </div>
 
 <a ui-sref="sell">Sell</a><br>
 <a ui-sref="home">Home</a>
 
-map
+
 
