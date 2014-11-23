@@ -30,6 +30,7 @@ text-shadow: none;
         padding: 0px;
         overflow-x: hidden;
       }
+      
       .boxes {
         margin: 5px 0;
         height: 220px;
@@ -145,9 +146,10 @@ color: beige;
 }
 
 
-.userHeader {
+.row.userHeader {
   height: 115px;
   margin-bottom: 20px;
+  margin-left: 0px;
   
 }
 
@@ -156,6 +158,9 @@ h1.userHeaderFont {
   font-size: 25px;
 }
 
+.row.userbookcontainer {
+  margin-left: 0px;
+}
 .userbookcontent {
   margin-bottom: 30px;
 }

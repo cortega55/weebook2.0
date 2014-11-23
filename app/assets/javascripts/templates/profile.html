@@ -1,4 +1,4 @@
-<div class="container templates profileContainer" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>
+<div class="container templates profileContainer" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>>
     
  
   <div class="row userHeader">
@@ -20,7 +20,7 @@
   
   
   <div ng-repeat="book in users.books">
-    <div class="row">
+    <div class="row userbookcontainer">
       <div class="col-md-12 userBookList">
         <div class="userbookcontent">
           <ul><strong>Title: </strong>{{ book.title }}</ul>
