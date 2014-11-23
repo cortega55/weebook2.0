@@ -6,46 +6,50 @@
   <div class="form-group">
     <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
   </div><br>
-  <div class="scroll" id="bookshtml"> 
-    <div id="resultsfield" ng-repeat="book in books | filter:searchBook">
-      <div id="workcontainer" class="bookshtml">
-        <div id="title">
-          <div class="bookslabel"><p class="size"><strong>Title of Book</strong></p></div>
-          <div class="content"><p>{{book.title}}</p></div>
-        </div>
-        <div id="author">
-          <div class="bookslabel"><p class="size"><strong>Author</strong></p></div>
-          <div class="content"><p>{{book.author}}</p></div>
-        </div>          
-        <div ng-show="book.details">
-          <div id="ISBN">
-            <div class="bookslabel"><p class="size"><strong>ISBN</strong></p></div>
-            <div class="content"><p>{{book.ISBN}}</p></div>
+
+  <div class="scroll" id="bookshtml">
+  <div class="bookhtmlbackground"></div> 
+    <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
+      <div class="row bookhtmlcontainer">
+          <div class="col-md-12 bookhtmllist">
+            <div class="userbookcontent">
+              <div class="bookslabel"><p class="size"><span class="spanbooktitle">Title of Book</span></p></div>
+              <div class="content"><p>{{book.title}}</p></div>
+            </div>
+            <div id="author">
+              <div class="bookslabel"><p class="size"><span class="spanbooktitle">Author</span></p></div>
+              <div class="content"><p>{{book.author}}</p></div>
+            </div>          
+            <div ng-show="book.details">
+              <div id="ISBN">
+                <div class="bookslabel"><p class="size"><span class="spanbooktitle">ISBN</span></p></div>
+                <div class="content"><p>{{book.ISBN}}</p></div>
+              </div>
+              <div id="coursecode">
+                <div class="bookslabel"><p class="size"><span class="spanbooktitle">Course Code</span></p></div>
+                <div class="content"><p>{{book.course_code}}</p></div>
+              </div>
+              <div id="createdat">
+                <div class="bookslabel"><p class="size"><span class="spanbooktitle">Submitted</span></p></div>
+                <div class="content"><p>{{book.created_at}}</p></div>
+                </div>
+                <div id="buy">
+                  <button class="btn btn-info"><a ui-sref="checkout">Buy Now!</a></button>
+                </div>
+            </div>
+            <div ng-hide="book.details" class="showHide">
+            <a ng-click="showBook(book);" class="btn btn-info" id="showicon">+</a>
+            </div>
+            <div ng-show="book.details" class="showHide">
+              <a ng-click="hideBook(book);" class="btn btn-info"id="hideicon">-</a>
+            </div>
           </div>
-          <div id="coursecode">
-            <div class="bookslabel"><p class="size"><strong>Course Code</strong></p></div>
-            <div class="content"><p>{{book.course_code}}</p></div>
-          </div>
-          <div id="createdat">
-            <div class="bookslabel"><p class="size"><strong>Submitted</strong></p></div>
-            <div class="content"><p>{{book.created_at}}</p></div>
-          </div>
-          <div id="buy">
-            <button class="btn btn-info" ng-click="addItemToCart(book)"><a ui-sref="checkout">Buy Now!</a></button>
-          </div>
-        </div>
-        <div ng-hide="book.details" class="showHide">
-          <a ng-click="showBook(book);" class="btn btn-info" id="showicon">+</a>
-        </div>
-        <div ng-show="book.details" class="showHide">
-          <a ng-click="hideBook(book);" class="btn btn-info"id="hideicon">-</a>
-        </div>
+          
+      </div><!-- end of rowuserbookcontainer -->
+        
+
       </div>       
     </div>
   </div>
 </div>
-<!-- 
-+
- <a ui-sref="checkout">Shopping Cart</a><br>
- <a ui-sref="home">Home</a>
--               -->
+

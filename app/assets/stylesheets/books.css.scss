@@ -17,7 +17,7 @@ text-align: center;
 }
 .signin {
   
-  background-image: url("/assets/laptophorses.jpg.jpg");
+  background-image: url("/assets/laptophorses.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -21px;
@@ -44,9 +44,15 @@ margin-top: 70px;
 .boxContainer a:hover {
 text-decoration: none;
 }
+
 div#bookshtml {
 padding-top: 0px;
 margin-left: 0px;
+}
+
+span.spanbooktitle {
+  text-shadow: none;
+  font-size: 20px;
 }
 div.bookshtml#workcontainer {
 color: black;
@@ -144,13 +150,19 @@ color: beige;
   margin-left: 99px;
 }
 .scroll {
-  color: white;
+  color: black;
   width: 280px;
   margin-left: 15px;
   opacity: 0.8;
   padding-top: 103px;
 }
-
+.bookhtmlbackground {
+  background-image: url("/assets/phonecomputer.jpeg");
+  background-size: cover;
+  height: 420px;
+  width: 320px;
+  position: fixed;
+}
 #sellForm {
   width: 275px;
 }
@@ -178,6 +190,16 @@ color: beige;
   border-radius: 10px;
 }
 
+.bookhtmllist {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 250px;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5);
+}
 
 .row.userHeader {
   height: 115px;
@@ -193,6 +215,10 @@ h1.userHeaderFont {
 
 .row.userbookcontainer {
   margin-left: 0px;
+}
+
+.row.bookhtmlcontainer {
+  margin-left: 25px;
 }
 .userbookcontent {
   margin-bottom: 30px;
@@ -228,6 +254,7 @@ width: 120px;
 }
 
 .linkbuttonlist {
+  padding-left: 0px;
   margin: 5px;
   display: block;
 }
