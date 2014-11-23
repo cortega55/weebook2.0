@@ -59,7 +59,8 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
 
     $scope.newBook = new Book();
 
-    $scope.shoppingCartItem = [];
+    $scope.shoppingcart = [];
+    
 
     Book.query(function(books) {
       $scope.books = books;
@@ -69,9 +70,10 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
       $scope.users = users;
     });
 
-
-    $scope.addItemToCart = function(item) {
-      $scope.shoppingCartItem.push()
+    $scope.addItemToCart = function (book) {
+      $scope.shoppingcart.unshift(book); 
+      console.log($scope.shoppingcart)
+          
     }
 
     $scope.saveBook = function () {
@@ -112,5 +114,6 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
       // }, function(errors) {
       //   $scope.errors = errors.data
       });
-    };
+    }
+
 }]);
