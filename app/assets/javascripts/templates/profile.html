@@ -1,83 +1,14 @@
 <div class="container templates" ng-controller="BookCtrl">
-  <div id="statspage">
-  	<div class="row" id="profileinfo">
-  		<div ng-hide="you.editing" id="profile">
-    		  <h1 class="page_titles">PROFILE</h1><br>
-          <div id="profilecontent">
+  You are {{ users.name }}<br>
+  {{ users.email }}
+  <ul ng-repeat="user in users">
+        {{ users.book }}
+  </ul>
 
-    		  <div ng-if="you.resident == true" >
-    			 <br><br>
-    		  </div>
-    		  <div ng-if="you.volunteer == true">
-    		    <label for="volunteer"><strong>Volunteer</strong></label>
-    			   You are a Volunteer<br><br>
-    		  </div>
-      		<div ng-if="you.corporation == true">
-      		  <label for="corporation"><strong>Organization</strong></label>
-      			You are an Organization<br><br>
-      		</div>
-      		  You are {{ users }}
-      			<br>
-      		<a ng-click="editUser(you);" class="btn btn-info"> EDIT </a>
-      	</div>
-      </div>
-  		<div ng-show="you.editing">
-  			<h1>Edit Profile</h1>
-  			<a ng-click="backUser(you)" class="btn btn-info"> BACK </a>
-          <form class="form-group">
-            <div>
-            	<label for="name"><strong>Name</strong></label>
-              <input ng-model="you.name" type="text" name="name" class="form-control" placeholder="Name">
-            </div>
-            <div>
-            	<label for="email"><strong>Email</strong></label>
-              <input ng-model="you.email" type="text" name="email" class="form-control" placeholder="Email">
-            </div>
-
-            <div>
-            	<label for="password"><strong>Password</strong></label>
-              <input ng-model="you.password" type="password" name="password" class="form-control" placeholder="Password">
-            </div>
-            <div>
-  		        <label for="resident"><strong>Resident</strong></label>
-              <input ng-model="you.resident" type="checkbox" name="resident" class="form-control">
-            </div>
-            <div>
-            	<label for="volunteer"><strong>Volunteer</strong></label>
-              <input ng-model="you.volunteer" type="checkbox" name="volunteer" class="form-control">
-            </div>
-            <div>
-            	<label for="corporation"><strong>Organization</strong></label>
-              <input ng-model="you.corporation" type="checkbox" name="corporation" class="form-control">
-            </div>
-            <div>
-            	<label for="phone_number"><strong>Phone Number</strong></label>
-              <input ng-model="you.phone_number" type="tel" name="phone_number" class="form-control" placeholder="Phone Number">
-            </div>
-            <div>
-            	<label for="address"><strong>Address</strong></label>
-              <input ng-model="you.address" type="text" name="address" class="form-control" placeholder="Address">
-            </div>
-            <div>
-            	<label for="city"><strong>City</strong></label>
-              <input ng-model="you.city" type="text" name="city" class="form-control" placeholder="City">
-            </div>
-            <div>
-             	<label for="state"><strong>State</strong></label>
-              <input ng-model="you.state" type="text" name="state" class="form-control" placeholder="State">
-            </div>
-            <div>
-             	<label for="zip"><strong>ZIP</strong></label>
-              <input ng-model="you.zip" type="text" name="zip" class="form-control" placeholder="ZIP">
-            </div>
-            <div>
-            <button type="submit" ng-click="updateUser(you)" class="btn btn-primary small" >Update</button>
-            </div>
-          </form>
-        </div>
-      </div>
-  </div>
 </div>
 
 <a ui-sref="sell">Sell</a><br>
 <a ui-sref="home">Home</a>
+
+map
+

@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       session[:remember_token] = @user.id
       @current_user = @user
       respond_to do |format|
-        format.html {redirect_to books_path}
+        format.html {redirect_to "/books/#/profile"}
         format.json {render json: @user, status: :created}
       end
     else
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     @user = user.find(params[:id])
     @user.destroy
     respond_to do |format|
-      format.html {redirect_to books_path}
+      format.html {redirect_to "/books/#/home"}
       format.json {render json: {head: :ok}}
     end
   end
