@@ -1,4 +1,24 @@
-<div class="container templates">
-	
+<div class="container templates" ng-controller="BookCtrl">
+  <div id="thankyou">
+    <h1>Shopping Cart</h1>
+    <div id="iteminfo">
+      <div class="row userbookcontainer">
+        <div class="col-md-12 userBookList">
+          <div class="userbookcontent">
+            <ul><strong>Title: </strong>{{ book.title }}</ul>
+            <ul><strong>Author: </strong>{{ book.author }}</ul>
+            <ul><strong>ISBN: </strong>{{ book.ISBN }}</ul>
+            <ul><strong>Course Code: </strong>{{ book.course_code }}</ul>
+          </div>
+          <div class="bookcoverplaceholder"></div> 
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+    
+    </div>
+  </div>
+  <a ui-sref="home">Home</a>
 </div>
-<button class="btn btn-info"><a ui-sref="books">Continue Shopping</a></button>

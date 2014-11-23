@@ -7,7 +7,7 @@
     <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
   </div><br>
   <div class="scroll" id="bookshtml"> 
-    <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
+    <div id="resultsfield" ng-repeat="book in books | filter:searchBook">
       <div id="workcontainer" class="bookshtml">
         <div id="title">
           <div class="bookslabel"><p class="size"><strong>Title of Book</strong></p></div>
@@ -31,7 +31,7 @@
             <div class="content"><p>{{book.created_at}}</p></div>
           </div>
           <div id="buy">
-            <button class="btn btn-info"><a ui-sref="checkout">Buy Now!</a></button>
+            <button class="btn btn-info" ng-click="addItemToCart(book)"><a ui-sref="checkout">Buy Now!</a></button>
           </div>
         </div>
         <div ng-hide="book.details" class="showHide">
@@ -44,7 +44,7 @@
     </div>
   </div>
 </div>
--<!-- 
+<!-- 
 +
  <a ui-sref="checkout">Shopping Cart</a><br>
  <a ui-sref="home">Home</a>
