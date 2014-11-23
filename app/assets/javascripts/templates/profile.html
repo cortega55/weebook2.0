@@ -1,11 +1,12 @@
-<div class="container templates">
+<div class="container templates" ng-controller="BookCtrl">
   <div id="statspage">
   	<div class="row" id="profileinfo">
   		<div ng-hide="you.editing" id="profile">
     		  <h1 class="page_titles">PROFILE</h1><br>
           <div id="profilecontent">
+
     		  <div ng-if="you.resident == true" >
-    			 You are a Resident<br><br>
+    			 <br><br>
     		  </div>
     		  <div ng-if="you.volunteer == true">
     		    <label for="volunteer"><strong>Volunteer</strong></label>
@@ -15,18 +16,7 @@
       		  <label for="corporation"><strong>Organization</strong></label>
       			You are an Organization<br><br>
       		</div>
-      		  <label for="name"><strong>Name</strong></label>
-      			{{you.name}}<br><br>
-      		  <label for="email"><strong>Email</strong></label>
-      			{{you.email}}<br><br>
-      		  <label for="address"><strong>Address</strong></label>
-      			{{you.address}}<br><br>
-      		  <label for="city"><strong>City</strong></label>
-      			{{you.city}}<br><br>
-      		  <label for="state"><strong>State</strong></label>
-      			{{you.state}}<br><br>
-      		  <label for="zip"><strong>ZIP</strong></label>
-      			{{you.zip}}<br>
+      		  You are {{ users }}
       			<br>
       		<a ng-click="editUser(you);" class="btn btn-info"> EDIT </a>
       	</div>
