@@ -16,7 +16,7 @@ text-shadow: none;
 }
     .container.ng-scope     {
         padding: 0px;
-        overflow-y: hidden;
+        
       }
       .boxes {
         margin: 5px 0;
@@ -133,9 +133,10 @@ color: beige;
 }
 
 
-.userHeader {
+.row.userHeader {
   height: 115px;
   margin-bottom: 20px;
+  margin-left: 0px;
   
 }
 
@@ -144,6 +145,9 @@ h1.userHeaderFont {
   font-size: 25px;
 }
 
+.row.userbookcontainer {
+  margin-left: 0px;
+}
 .userbookcontent {
   margin-bottom: 30px;
 }
