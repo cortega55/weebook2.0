@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+input.buttons.btn.btn-primary {
+margin-top: 10px;
+}
+.wrapper {
+width: 320px;
+text-align: center;
+}
+.boxContainer a:hover {
+text-decoration: none;
+}
 div#bookshtml {
 padding-top: 0px;
 margin-left: 0px;
@@ -9,6 +19,7 @@ margin-left: 0px;
 div.bookshtml#workcontainer {
 color: black;
 text-align: center;
+margin-bottom: 30px;
 }
 h1#booksTitle {
 color: black;
