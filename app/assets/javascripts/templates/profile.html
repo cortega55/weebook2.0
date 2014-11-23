@@ -5,12 +5,30 @@
     <div class="col-md-12">
       <h1 class="userHeaderFont">Hi, {{ users.name }}</h1>
     </div>
+    <div class="col-md-12">
+      <h5 class="selleremail"><strong>Seller email: </strong><span class="emailfont">{{users.email}}</span></h5>
+    </div>
+    <div class="spacer"></div>
+    <div class="col-md-12 profilebuttons">
+      <ul class="linkbuttonlist">
+        <button class="btn btn-info linkbutton"><a ui-sref="sell">Sell A Book</a></button>
+        <button class="btn btn-info"><a ui-sref="books">Browse Books</a></button>
+      </ul>
+    </div>
   </div>
+
+  
   
   <div ng-repeat="book in users.books">
     <div class="row">
-      <div class="col-md-12 userBookList"> 
-    {{ book.title }}
+      <div class="col-md-12 userBookList">
+        <div class="userbookcontent">
+          <ul><strong>Title: </strong>{{ book.title }}</ul>
+          <ul><strong>Author: </strong>{{ book.author }}</ul>
+          <ul><strong>ISBN: </strong>{{ book.ISBN }}</ul>
+          <ul><strong>Course Code: </strong>{{ book.course_code }}</ul>
+        </div>
+        <div class="bookcoverplaceholder"></div> 
       </div>
     </div>
   </div>
@@ -19,8 +37,7 @@
 
 </div>
 
-<a ui-sref="sell">Sell</a><br>
-<a ui-sref="home">Home</a>
+
 
 
 

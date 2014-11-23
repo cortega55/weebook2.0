@@ -125,14 +125,16 @@ color: beige;
 .userBookList {
   margin: 0 auto;
   margin-bottom: 15px;
+  padding: 10px;
   width: 250px;
-  height: 250px;
+  height: auto;
   border: 1px solid grey;
+  border-radius: 10px;
 }
 
 
 .userHeader {
-  height: 200px;
+  height: 115px;
   margin-bottom: 20px;
   
 }
@@ -140,4 +142,42 @@ color: beige;
 h1.userHeaderFont {
   text-align: center;
   font-size: 25px;
+}
+
+.userbookcontent {
+  margin-bottom: 30px;
+}
+
+.bookcoverplaceholder {
+  height: 100px;
+  width: 100px;
+  background-color: lightgrey;
+  margin: 0 auto;
+}
+
+span.emailfont {
+  color: red;
+}
+
+h5.selleremail {
+  text-align: center;
+}
+
+.spacer {
+  width: 75%;
+  border-bottom: 1px solid grey;
+  margin: 0 auto;
+}
+
+.profilebuttons {
+  margin: 0 auto;
+  text-align: center;
+}
+button.btn.btn-info.linkbutton {
+width: 120px;
+}
+
+.linkbuttonlist {
+  margin: 5px;
+  display: block;
 }
