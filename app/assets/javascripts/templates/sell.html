@@ -1,12 +1,18 @@
 <div class="container templates" ng-controller="BookCtrl">
   <div class="sellpage">
-    
+    <div class="sellhomebutton">
+      <a ui-sref="home">Home</a>
+    </div>
    
    <!--  <div class="form-group">
       <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
     </div><br> -->
+   
     <div class="scroll"> 
-      <form name="form" class="form-group" >
+       <div class="selltitle">
+        <h1>Sell</h1>
+       </div>
+      <form name="form" id="sellForm" class="form-group" >
         <label for="title"><strong>Title:</strong></label>
           <input ng-model="newBook.title" type="text" name="title" class="form-control" placeholder="Title">
         <label for="author"><strong>Author:</strong></label>
@@ -19,6 +25,7 @@
         <div class="sellbutton">
           <button type="button" class="btn btn-primary" ng-click="saveBook()">Sell My Book!</button>
         </div>
+        
         
       </form>
   <!-- <div class="form-group">
@@ -62,7 +69,7 @@
       </div> -->
    
     </div>
-  
+  </div>
 </div>
 
 

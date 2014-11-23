@@ -68,28 +68,43 @@ color: beige;
 }
 
 
-    .sellpage {
-      background-image: url("/assets/leavesbike2.jpg");
-background-size: contain;
-background-repeat: no-repeat;
-height: 600px;
-width: 342px;
-    }
-    .page_titles {
-      color: white;
-      text-shadow: 2px 2px rgba(0,0,0,.7);
-      margin-left: 99px;
-    }
-    .scroll {
-      color: white;
-      width: 167px;
-      margin-left: 64px;
-      opacity: 0.7;
-    }
-    .sellbutton {
-      margin-left: 30px;
-    }
 /* START PROFILE PAGE STYLING */
+
+.sellpage {
+  background-image: url("/assets/leavesbike2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 342px;
+}
+.page_titles {
+  color: white;
+  text-shadow: 2px 2px rgba(0,0,0,.7);
+  margin-left: 99px;
+}
+.scroll {
+  color: white;
+  width: 280px;
+  margin-left: 15px;
+  opacity: 0.8;
+  padding-top: 103px;
+}
+
+#sellForm {
+  width: 275px;
+}
+.sellbutton {
+  margin-left: 79px;
+}
+.sellhomebutton a{
+  color: white;
+}
+.selltitle h1{
+  color: white;
+  text-align: center;
+}
+    
+>>>>>>> 9ea9f8acb6f3a55d55ae634bf6d52e810322d1ee
 
 .profileContainer {
   max-width: 320px;
