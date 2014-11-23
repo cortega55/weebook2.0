@@ -1,47 +1,48 @@
-
 <div class="container templates" ng-controller="BookCtrl">
-    <h1 class="page_titles"id="booksTitle">BOOKS</h1>
-    <div class="form-group">
-      <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
-    </div><br>
-    <div class="scroll" id="bookshtml"> 
-      <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
-        <div id="workcontainer" class="bookshtml">
-          <div id="title">
-            <div class="bookslabel"><p class="size"><strong>Title of Book</strong></p></div>
-            <div class="content"><p>{{book.title}}</p></div>
-          </div>
-          <div id="tools">
-            <div class="bookslabel"><p class="size"><strong>Tools Needed</strong></p></div>
-            <div class="content"><p>{{book.author}}</p></div>
-          </div>
-          <div id="time">
-            <div class="bookslabel"><p class="size"><strong>Time Preference</strong></p></div>
+  <h1 class="page_titles"id="booksTitle">BOOKS</h1>
+  <div class="form-group">
+    <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
+  </div><br>
+  <div class="scroll" id="bookshtml"> 
+    <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
+      <div id="workcontainer" class="bookshtml">
+        <div id="title">
+          <div class="bookslabel"><p class="size"><strong>Title of Book</strong></p></div>
+          <div class="content"><p>{{book.title}}</p></div>
+        </div>
+        <div id="author">
+          <div class="bookslabel"><p class="size"><strong>Author</strong></p></div>
+          <div class="content"><p>{{book.author}}</p></div>
+        </div>          
+        <div ng-show="book.details">
+          <div id="ISBN">
+            <div class="bookslabel"><p class="size"><strong>ISBN</strong></p></div>
             <div class="content"><p>{{book.ISBN}}</p></div>
           </div>
-          <div id="duration">
-            <div class="bookslabel"><p class="size"><strong>Job Duration</strong></p></div>
+          <div id="coursecode">
+            <div class="bookslabel"><p class="size"><strong>Course Code</strong></p></div>
             <div class="content"><p>{{book.course_code}}</p></div>
           </div>
           <div id="createdat">
-            <div class="bookslabel"><p class="size">Created At:</p></div>
+            <div class="bookslabel"><p class="size"><strong>Submitted</strong></p></div>
             <div class="content"><p>{{book.created_at}}</p></div>
           </div>
-          <div id="contact">
-            <p class="bookslabel"><a class="size" href="mailto:{{job.contact_email}}?subject=Help From TrueGood">
-              CONTACT
-            </a></p>
-          </div>
-          <div id="delete">
-            <span>
-              <a ng-click="deleteBook(book);" class="btn btn-info"> DELETE </a>
-            </span>
+          <div id="buy">
+            <button class="btn btn-info"><a ui-sref="checkout">Buy Now!</a></button>
           </div>
         </div>
-        
-      </div>
+        <div ng-hide="book.details" class="showHide">
+          <a ng-click="showBook(book);" class="btn btn-info" id="showicon">+</a>
+        </div>
+        <div ng-show="book.details" class="showHide">
+          <a ng-click="hideBook(book);" class="btn btn-info"id="hideicon">-</a>
+        </div>
+      </div>       
     </div>
+  </div>
 </div>
-
-<a ui-sref="checkout">Shopping Cart</a><br>
-<a ui-sref="home">Home</a>
+-<!-- 
++
+ <a ui-sref="checkout">Shopping Cart</a><br>
+ <a ui-sref="home">Home</a>
+-               -->
