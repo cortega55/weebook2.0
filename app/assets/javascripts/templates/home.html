@@ -1,15 +1,69 @@
 <div class="container">
     <head>
+      <style>
+
+      .container.ng-scope     {
+        max-width: 320px !important;
+        height: auto;
+      }
+      .boxes {
+        margin: 5px 0;
+      }
+      .topbox {
+        height: 220px;
+        width: 320px;
+        background-image: url("/assets/bookcase.jpg");
+        background-size: cover;
+        padding: 111px;
+        color: white;
+        opacity: 0.8;
+      }
+      .topbox2 {
+        height: 220px;
+        width: 320px;
+        background-image: url("/assets/bike.jpg");
+        background-size: cover;
+        padding: 111px;
+        color: white;
+        opacity: 0.8;
+      }
+
+      img {
+        height: 68px;
+        opacity: 0.9;
+      }
+      .homeh1{
+      text-shadow: 2px 2px rgba(0,0,0,.7);
+      text-align: center;
+      margin-top: -20px;
+    }
+     /* .logo {
+        background-image: url("/assets/logo.png");
+        background-position: center;
+
+      }*/
+      
+      </style>
     </head>
-    <body class="loading">
-      <div class="hsContent1" id="image1">
-        <img ng-src="/assets/weebookhome_lightblue.png">
+    <body class="loading">  
+      <div class="logo">
+       <img ng-src="/assets/logo.png">
       </div>
-      <a ui-sref="books">Buy</a><br>
-      <div class="hsContent1" id="image1">
-        <img ng-src="/assets/NH1nLsV (1).png">
+     <div class="boxContainer">
+      <a ui-sref="books">
+      <div class="topbox boxes">
+        <h1 class="homeh1">Buy</h1>
       </div>
-      <a ui-sref="profile">Profile</a><br>
+      </a>
+      
+      
+      <a ui-sref="sell">
+      <div class="topbox2 boxes">
+        <h1 class="homeh1">Sell</h1>
+      </div>
+      </a>
+
+    </div>
     </body>
 </div>
 
