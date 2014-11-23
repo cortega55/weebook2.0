@@ -46,8 +46,9 @@ weebookApp.factory('Book', ['$resource', function($resource) {
 }]);
 
 weebookApp.factory('User', ['$resource', function($resource) {
+  var userAccountId = $("#defaultContainer").data("user-id");
   return $resource('/users/:id',
-     {id: '@id'},
+     {id: userAccountId},
      {update: { method: 'PATCH'}});
 }]);
 
@@ -62,7 +63,7 @@ weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Boo
       $scope.books = books;
     });
 
-    User.query(function(users) {
+    User.get(function(users) {
       $scope.users = users;
     });
 
