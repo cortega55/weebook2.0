@@ -89,5 +89,26 @@ width: 342px;
     .sellbutton {
       margin-left: 30px;
     }
-    
+/* START PROFILE PAGE STYLING */
 
+.profileContainer {
+  max-width: 320px;
+}
+.userBookList {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid grey;
+}
+
+.userHeader {
+  height: 50px;
+  width: 100%;
+  background-color: lightblue;
+}
+
+h1.userHeaderFont {
+  text-align: center;
+  font-size: 25px;
+}

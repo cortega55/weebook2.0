@@ -1,9 +1,18 @@
-<div class="container templates" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>
-  Hi, {{ users.name }}<br>
-  {{ users.email }}
+<div class="container templates profileContainer" id="defaultContainer" ng-controller="BookCtrl" data-user-id=<%= current_user.id.to_s %>
+    
+ 
+  <div class="row userHeader">
+    <div class="col-md-12">
+      <h1 class="userHeaderFont">Hi, {{ users.name }}</h1>
+    </div>
+  </div>
   
   <div ng-repeat="book in users.books">
+    <div class="row">
+      <div class="col-md-12 userBookList"> 
     {{ book.title }}
+      </div>
+    </div>
   </div>
         
   
