@@ -1,45 +1,5 @@
 <div class="container templates">
-	<h1 class="page_titles">Shopping Cart</h1>
-  <div class="form-group">
-    <input ng-model="searchUser" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
-  </div><br>
-  <div class="scroll">
-    <div id="resultsfieldtwo" ng-repeat="user in users | filter:searchUser ">
-      <div id="workcontainertwo">          
-        <div id="name">
-          <div class="jobslabel"><p class="size"><strong>Name</strong></p></div>
-          <div class="content"><p>{{user.name}}</p></div>
-        </div>
-        <div id="reference">
-          <div class="jobslabel"><p class="size"><strong>Reference</strong></p></div>
-          <div class="content"><p>{{user.reference}}</p></div>
-        </div>
-        <div id="background">
-          <div class="jobslabel"><p class="size"><strong>Background Check</strong></p></div>
-          <div class="content"><p>{{user.background_check}}</p></div>
-        </div>
-        <div id="city">
-          <div class="jobslabel"><p class="size"><strong>City</strong></p></div>
-          <div class="content"><p>{{user.city}}</p></div>
-        </div>
-        <div id="state">
-          <div class="jobslabel"><p class="size"><strong>State</strong></p></div>
-          <div class="content"><p>{{user.state}}</p></div>
-        </div>
-        <div id="zip">
-          <div class="jobslabel"><p class="size"><strong>ZIP</strong></p></div>
-          <div class="content"><p>{{user.zip}}</p></div>
-        </div>
-        <div id="email">
-          <div class="content">
-            <p>
-              <a class="size" href="mailto:{{user.email}}?subject=Please Help, Do TrueGood">CONTACT</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	
 </div>
 
 <a ui-sref="home">Home</a>
