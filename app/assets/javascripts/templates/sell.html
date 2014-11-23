@@ -1,5 +1,7 @@
 <div class="container templates" ng-controller="BookCtrl">
-    <h1 class="page_titles">SELL SELL SELL</h1>
+  <div class="sellpage">
+    
+   
    <!--  <div class="form-group">
       <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
     </div><br> -->
@@ -14,14 +16,16 @@
         <label for="course_code"><strong>Course Code:</strong></label>
           <input ng-model="newBook.course_code" type="text" name="course_code" class="form-control" placeholder="Course Code">
         <br>
-        <button class="button" ng-click="saveBook()">Sell My Book!</button>
+        <div class="sellbutton">
+          <button type="button" class="btn btn-primary" ng-click="saveBook()">Sell My Book!</button>
+        </div>
         
       </form>
-  <div class="form-group">
+  <!-- <div class="form-group">
       <input ng-model="searchBook" name="searchbox" type="text" class="form-control search" id="searchbar" placeholder="Search">
-    </div><br>
+    </div><br> -->
 
-      <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
+      <!-- <div id="resultsfield" ng-repeat="book in books | filter:searchBook ">
         <div id="workcontainer">
           <div id="type">
             <div class="bookslabel"><p class="size"><strong>Type of Work</strong></p></div>
@@ -55,13 +59,14 @@
           </div>
         </div>
         
-      </div>
+      </div> -->
    
     </div>
+  
 </div>
 
 
 
 
-<a ui-sref="profile">Profile</a><br>
+
 
