@@ -1,5 +1,7 @@
+<a ui-sref="books">Back to browsing</a>
+
 <div class="container templates" ng-controller="BookCtrl">
-  <div id="thankyou">
+  <div id="thankyou" ng-show="book.details">
     <h1>Shopping Cart</h1>
     <div id="iteminfo">
       <div class="row userbookcontainer">
@@ -15,14 +17,13 @@
       </div>
     </div>
 
-<div ng-repeat="book in shoppingcart">
-  {{shoppingcart}}
-  {{book.title}}
+<!-- <div ng-repeat="book in shoppingcart">
+  
 
-</div>
-    <div>
+</div> -->
     
-    </div>
   </div>
-  <a ui-sref="home">Home</a>
+  <div class="fakebutton">
+    <button type="button" class="btn btn-primary">Confirm Purchase</button>
+    </div>
 </div>

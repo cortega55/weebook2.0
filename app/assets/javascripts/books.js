@@ -54,7 +54,8 @@ weebookApp.factory('User', ['$resource', function($resource) {
 
 
 weebookApp.controller('BookCtrl', ['$scope','Book', 'User', function($scope, Book, User) {
-
+    $scope.hide = false;
+    $scope.show = true;
     $scope.books= [];
 
     $scope.newBook = new Book();

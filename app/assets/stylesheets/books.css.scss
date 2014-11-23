@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div#iteminfo {
-margin-left: 15px;
+margin-left: -14px;
 }
 input#session_password {
 color: black;
@@ -280,5 +280,12 @@ width: 120px;
   overflow-x: hidden;
 overflow-y: scroll;
 }
-
-
+#thankyou h1 {
+  text-align: center;
+}
+.fakebutton {
+  margin-left: 95px;
+}
+div#thanktheheaven {
+text-align: center;
+}
