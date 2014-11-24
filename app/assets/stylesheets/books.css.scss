@@ -1,6 +1,4 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 .row.userbookcontainer{
   margin-right: 0px;
 }
@@ -66,7 +64,6 @@ span.spanbooktitle {
 }
 div.bookshtml#workcontainer {
 color: black;
-
 text-align: left;
 margin-bottom: 30px;
 margin-left: 20px;
@@ -158,7 +155,6 @@ color: beige;
 .page_titles {
   color: white;
   text-shadow: 2px 2px rgba(0,0,0,.7);
-  margin-left: 99px;
 }
 .scroll {
   color: black;
@@ -295,7 +291,7 @@ overflow-y: scroll;
   text-align: center;
 }
 .fakebutton {
-  margin-left: 95px;
+ 
 }
 div#thanktheheaven {
 text-align: center;
