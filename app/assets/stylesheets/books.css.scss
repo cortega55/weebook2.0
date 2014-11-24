@@ -1,6 +1,12 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.row.userbookcontainer{
+  margin-right: 0px;
+}
+ul.ng-binding {
+padding-left: 0px;
+}
 div#defaultContainer {
 margin-top: -21px;
 }
@@ -17,6 +23,7 @@ margin-top: 10px;
 .wrapper {
 width: 320px;
 text-align: center;
+margin: 0 auto;
 }
 .signin {
   
@@ -71,6 +78,7 @@ text-shadow: none;
     .container.ng-scope     {
         padding: 0px;
         overflow-x: hidden;
+        text-align: center;
       }
       
       .boxes {
@@ -84,12 +92,12 @@ text-shadow: none;
         opacity: 0.8;
       }
       .topbox {
-        
+        margin:0 auto;
         background-image: url("/assets/bookcase.jpg");
         
       }
       .topbox2 {
-        
+        margin:0 auto;
         background-image: url("/assets/bike.jpg");
         
       }
@@ -188,7 +196,7 @@ color: beige;
   margin: 0 auto;
   margin-bottom: 15px;
   padding: 10px;
-  width: 250px;
+  
   height: auto;
   border: 1px solid grey;
   border-radius: 10px;
